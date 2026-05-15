@@ -1,16 +1,23 @@
-# React + Vite
+# Joshua Yeo — Sound Design Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Joshua Yeo, focused on sound design, technical sound design, and game audio implementation.
 
-Currently, two official plugins are available:
+Live site: https://j-yeo.github.io/portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Built with
 
-## React Compiler
+- React
+- Vite
+- CSS
+- GitHub Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Featured work
 
-## Expanding the ESLint configuration
+- Unreal Engine / Wwise Technical Audio Reel
+- Unity / Wwise Technical Sound Design Reel
+- Dust Bunny case study
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contact
+
+Email: yeojosh092@gmail.com  
+LinkedIn: https://www.linkedin.com/in/josh-h-yeo/
