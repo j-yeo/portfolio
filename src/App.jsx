@@ -10,10 +10,12 @@ const links = {
   linkedin: 'https://www.linkedin.com/in/josh-h-yeo/',
   resume: assetPath('resume.pdf'),
   itch: 'https://j-yeo.itch.io',
-  featuredTechnicalReel: 'https://vimeo.com/1188123456',
-  featuredTechnicalReelEmbed: 'https://player.vimeo.com/video/1188123456',
+  featuredTechnicalReel: 'https://vimeo.com/1192391079',
+  featuredTechnicalReelEmbed: 'https://player.vimeo.com/video/1192391079',
   unityTechnicalReel: 'https://vimeo.com/1192391079',
   unityTechnicalReelEmbed: 'https://player.vimeo.com/video/1192391079',
+  unrealTechnicalReel: 'https://vimeo.com/1188123456',
+  unrealTechnicalReelEmbed: 'https://player.vimeo.com/video/1188123456',
   unityCaseStudy: '#/dust-bunny',
   dustBunnyItch: 'https://stoopidchzcat.itch.io/dust-bunny',
 }
@@ -22,8 +24,8 @@ const emailAddress = 'yeojosh092@gmail.com'
 
 const reels = [
   {
-    title: 'Unreal Engine / Wwise Technical Audio Reel',
-    label: 'Featured Above',
+    title: 'Unreal Engine / Wwise Technical Audio Study',
+    label: 'UE5/Wwise Technical Audio Reel',
     description:
       'Gameplay audio systems implemented in Unreal and Wwise, including C++/Blueprint scripting, states, RTPC behavior, spatial playback, and mix changes.',
     tags: ['Unreal Engine', 'Wwise', 'C++', 'Blueprints', 'RTPCs'],
@@ -33,10 +35,10 @@ const reels = [
     cta: 'Watch Reel',
   },
   {
-    title: 'Unity / Wwise Technical Sound Design Reel',
-    label: 'Dust Bunny technical audio reel',
+    title: 'Dust Bunny',
+    label: 'Unity/Wwise Technical Audio Reel',
     description:
-      'Technical audio systems from Dust Bunny, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
+      'Technical audio systems from Dust Bunny, a 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
     tags: ['Unity', 'Wwise', 'C#', 'RTPCs', 'Adaptive Music', 'Spatial Audio'],
     href: links.unityTechnicalReel,
     embed: links.unityTechnicalReelEmbed,
@@ -47,15 +49,15 @@ const reels = [
 
 const dustBunnyTeaser = {
   title: 'Dust Bunny',
-  label: 'Unity / Wwise Technical Audio Systems',
+  label: 'Featured Above',
   description:
     'A compact game-audio case study covering adaptive music, RTPC-driven danger behavior, physics-based SFX, spatial ambience, and mix systems built for player feedback and emotional pacing.',
-  tags: ['Unity', 'Wwise', 'C#', 'Adaptive Music', 'RTPCs'],
+  tags: ['Unity', 'Wwise', 'C#', 'Adaptive Music', 'RTPCs', 'Spatial Audio'],
   href: links.unityCaseStudy,
   cta: 'Read Case Study',
 }
 
-const featuredReel = reels[0]
+const featuredReel = reels[1]
 const unityReel = reels[1]
 const unrealReel = reels[0]
 
@@ -164,9 +166,6 @@ const mixSystems = [
       'The player_state State Group controls volume and low-pass filtering for music and ambience when UI panels, Memory Object panels, or pause states shift the player focus.',
   },
 ]
-
-const personalDetail =
-  'I’m drawn to small implementation choices: how sound enters, shifts, or makes space at the right time so a game feels alive.'
 
 const getRouteFromHash = () => (window.location.hash === '#/dust-bunny' ? 'dust-bunny' : 'home')
 
@@ -430,7 +429,7 @@ function SiteNav({ isCompact, isMobileMenuOpen, onToggleMenu, onCloseMenu }) {
           <span className="brand-mark" aria-hidden="true" />
           <span className="brand-copy">
             <span className="brand-title">Joshua Yeo Audio</span>
-            <span className="brand-subtitle">Technical Sound Design</span>
+            <span className="brand-subtitle">Sound Design / Technical Audio</span>
           </span>
         </a>
         <button
@@ -493,18 +492,14 @@ function HomePage({ onActiveAtmosphereChange }) {
   return (
     <>
       <section id="home" className="hero-shell" data-home-atmosphere>
-        <p className="eyebrow hero-eyebrow">Technical Sound Design / Game Audio Implementation</p>
+        <p className="eyebrow hero-eyebrow">Featured Technical Sound Design Reel</p>
         <FeaturedReel work={featuredReel} />
       </section>
 
       <section id="reels" className="section-shell selected-work" data-home-atmosphere>
-        <div className="section-heading">
-          <p>Selected Work</p>
-        </div>
         <div className="reel-list">
-          <ReelEmbed work={unityReel} />
-          <DustBunnyTeaser />
-          <CompactReelCard work={unrealReel} />
+          <CompactReelCard work={unityReel} />
+          <ReelEmbed work={unrealReel} />
         </div>
       </section>
 
