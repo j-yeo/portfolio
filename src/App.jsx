@@ -49,9 +49,9 @@ const reels = [
 
 const dustBunnyTeaser = {
   title: 'Dust Bunny',
-  label: 'Featured Above',
+  label: 'Unity/Wwise Technical Audio Reel and Case Study',
   description:
-    'A compact game-audio case study covering adaptive music, RTPC-driven danger behavior, physics-based SFX, spatial ambience, and mix systems built for player feedback and emotional pacing.',
+    'Technical audio systems from Dust Bunny, a 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
   tags: ['Unity', 'Wwise', 'C#', 'Adaptive Music', 'RTPCs', 'Spatial Audio'],
   href: links.unityCaseStudy,
   cta: 'Read Case Study',
@@ -498,7 +498,7 @@ function HomePage({ onActiveAtmosphereChange }) {
 
       <section id="reels" className="section-shell selected-work" data-home-atmosphere>
         <div className="reel-list">
-          <CompactReelCard work={unityReel} />
+          <DustBunnyTeaser />
           <ReelEmbed work={unrealReel} />
         </div>
       </section>
