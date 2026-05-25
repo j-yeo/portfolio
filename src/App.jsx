@@ -29,9 +29,9 @@ const reels = [
     description:
       'Gameplay audio systems implemented in Unreal and Wwise, including C++/Blueprint scripting, states, RTPC behavior, spatial playback, and mix changes.',
     tags: ['Unreal Engine', 'Wwise', 'C++', 'Blueprints', 'RTPCs'],
-    href: links.featuredTechnicalReel,
-    embed: links.featuredTechnicalReelEmbed,
-    embedTitle: 'Joshua Yeo Technical Audio Reel',
+    href: links.unrealTechnicalReel,
+    embed: links.unrealTechnicalReelEmbed,
+    embedTitle: 'Joshua Yeo - UE5/Wwise Technical Audio Reel',
     cta: 'Watch Reel',
   },
   {
@@ -49,7 +49,7 @@ const reels = [
 
 const dustBunnyTeaser = {
   title: 'Dust Bunny',
-  label: 'Unity/Wwise Technical Audio Reel and Case Study',
+  label: 'Featured Project / Case Study',
   description:
     'Technical audio systems from Dust Bunny, a 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
   tags: ['Unity', 'Wwise', 'C#', 'Adaptive Music', 'RTPCs', 'Spatial Audio'],
@@ -416,7 +416,10 @@ function DustBunnyTeaser() {
           {dustBunnyTeaser.tags.map((tag) => <span key={tag}>{tag}</span>)}
         </div>
       </div>
-      <ButtonLink href={dustBunnyTeaser.href} variant="secondary">{dustBunnyTeaser.cta}</ButtonLink>
+      <div className="case-teaser-actions">
+        <ButtonLink href={dustBunnyTeaser.href}>{dustBunnyTeaser.cta}</ButtonLink>
+        <ButtonLink href={links.unityTechnicalReel} variant="secondary">Watch Reel</ButtonLink>
+      </div>
     </article>
   )
 }
@@ -563,7 +566,7 @@ function DustBunnyCaseStudyPage({ onActiveAtmosphereChange, onExpandImage }) {
           <p className="eyebrow">Main Case Study</p>
           <h2>Dust Bunny</h2>
           <p>
-            Adaptive music, gameplay-responsive SFX, spatial ambience, and mix-control systems for a cozy 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom.
+            Adaptive music, gameplay-responsive SFX, spatial ambience, and mix-control systems for a cozy 3D narrative-platformer about a sentient bunny-shaped dust clump moving through the messy bedroom of a girl about to go off to college, navigating clutter and memories through different stages in life.
           </p>
           <div className="focus-row">
             {caseFocus.map((item) => <span key={item}>{item}</span>)}
@@ -591,17 +594,16 @@ function DustBunnyCaseStudyPage({ onActiveAtmosphereChange, onExpandImage }) {
         </div>
         <div className="case-copy">
           <p>
-            Dust Bunny&apos;s audio supports the player&apos;s experience of a bedroom from a very small perspective. Room tone, spatial ambience, object interactions, movement sounds, exterior sound, and music transitions all contribute to scale, emotional pacing, and readability.
+            In <em>Dust Bunny</em>, you play as a sentient bunny-shaped dust clump that grows by rolling over clutter in a messy bedroom. As a largely narrative-based game, adaptive music, responsive gameplay SFX and ambient sound play a significant part in the overall player experience of the game.
           </p>
           <p>
-            The project demonstrates technical audio as a player-facing craft: implementation choices affect when music enters, how ambience returns, how UI feedback cuts through, how danger changes in real time, and how physical movement affects the sound of the character and surrounding clutter.
+            Room tone, spatial ambience, object interactions, movement sounds, exterior sound, and music transitions are all designed with the goal of player immersion and emotional connection while both maintaining and contributing to clarity of gameplay.
           </p>
         </div>
         <Figure
           image={assetPath('dust-bunny-still.png')}
           title="Dust Bunny still"
           alt="In-game screenshot from Dust Bunny showing the small dust bunny character within a bedroom-scale environment."
-          caption="Dust Bunny is a cozy 3D narrative-platformer about a sentient bunny-shaped dust clump navigating a lived-in bedroom."
           tall
           fit="contain"
           natural
@@ -617,7 +619,7 @@ function DustBunnyCaseStudyPage({ onActiveAtmosphereChange, onExpandImage }) {
         </div>
         <div className="case-copy">
           <p>
-            Dust Bunny&apos;s music adapts through Wwise State Groups, Music Switch Containers, Music Playlist Containers, and Unity C# trigger scripts. The high-level mus_state group controls the main mus_game container, while zone-specific state groups shape musical progression inside the first two areas.
+            Dust Bunny&apos;s music adapts through Wwise State Groups, Music Switch Containers, Music Playlist Containers, and Unity C# trigger scripts. .
           </p>
           <div className="state-list">
             {musicStates.map(([name, body]) => (
@@ -677,7 +679,7 @@ function DustBunnyCaseStudyPage({ onActiveAtmosphereChange, onExpandImage }) {
         </div>
         <div className="case-copy">
           <p>
-            Gameplay-responsive SFX are tied to player growth, movement speed, and object physics. These systems connect sound to the dust bunny&apos;s changing body and to the physical clutter that defines the bedroom.
+            Gameplay-responsive SFX are tied to player growth, movement speed, and object physics. These systems connect sound to changes in the dust bunny&apos;s size and to the physical clutter around the bedroom.
           </p>
           <div className="callout-list">
             {responsiveAudio.map((item) => (
@@ -707,10 +709,10 @@ function DustBunnyCaseStudyPage({ onActiveAtmosphereChange, onExpandImage }) {
         </div>
         <div className="case-copy wide">
           <p>
-            The ambience system combines room tone, localized emitters, randomized intermittent playback, moving ambient emitters, and exterior sound. This helps the house feel lived-in even when the player is alone, while reinforcing the scale of the room from the perspective of a small dust bunny.
+            The ambience system combines room tone, localized emitters, randomized intermittent playback, moving ambient emitters, and exterior sound. The goal was for the house feel lived-in even while the player is alone and the room is empty, while reinforcing the scale of the room compared to a tiny dust bunny.
           </p>
           <p>
-            The ambience system separates emitter movement from playback timing, allowing sounds to move between predefined points while Wwise events are posted at varied intervals.
+            The ambience system separates emitter movement from playback timing, allowing sounds to move between predefined points while Wwise events are posted at varied, randomized intervals.
           </p>
           <div className="ambience-notes">
             {ambienceDetails.map((item) => (
@@ -757,18 +759,6 @@ function DustBunnyCaseStudyPage({ onActiveAtmosphereChange, onExpandImage }) {
               <p>{item.body}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className={caseSectionClassName(5, 'reflection-section')}>
-        <div className="case-section-heading">
-          <p>06</p>
-          <h3>Reflection</h3>
-        </div>
-        <div className="reflection-note">
-          <p>
-            Dust Bunny reinforced how much implementation choices shape the emotional effect of sound design. Timing, transitions, ducking, filtering, spatialization, and responsiveness all change how a player reads a moment. The smallest details often decide whether a sound feels attached to the world or simply placed on top of it.
-          </p>
         </div>
       </section>
 
