@@ -956,6 +956,13 @@ figcaption {
   white-space: nowrap;
 }
 
+.case-teaser-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
 .compact-reel-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -1808,6 +1815,10 @@ figcaption {
 
   .case-teaser .button-link {
     width: fit-content;
+  }
+
+  .case-teaser-actions {
+    justify-content: flex-start;
   }
 
   .compact-reel-card {
