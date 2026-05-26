@@ -499,7 +499,7 @@ function HomePage({ onActiveAtmosphereChange }) {
         <FeaturedReel work={featuredReel} />
       </section>
 
-      <section id="reels" className="section-shell selected-work" data-home-atmosphere>
+      <section id="reels" className="section-shell work-panels" data-home-atmosphere>
         <div className="reel-list">
           <DustBunnyTeaser />
           <ReelEmbed work={unrealReel} />
@@ -777,15 +777,15 @@ function AboutSection({ atmosphereSection = false }) {
       </figure>
       <div>
         <p className="eyebrow">About</p>
-        <h2>Hi! I’m Josh. I build responsive audio systems for games.</h2>
+        <h2>Hi! I’m Josh.</h2>
         <p>
-          I work between sound design and implementation to create gameplay-driven audio that supports player feedback, immersion, and emotional impact. Weirdly, the small implementation choices are what excite me the most: the way a minute decision in how sound enters, shifts, or makes space at just the right time can change what a player actually experiences and feels.
+          I'm a Toronto-based sound designer and technical sound designer specializing in game audio implementation. With a background in music, I'm especially drawn to and passionate about how sound design and implementation can make a player feel, and how the small choices that don't necessarily grab your attention can have a huge impact. 
         </p>
         <p>
-          Before audio, I spent years building and running teams in fast-moving environments. That experience shaped me and how I collaborate: I value process, communication (!!), and what the people around me actually need as much as what sounds right.
+          Before audio, I spent years opening bakeries and coffee shops here in Toronto. Building and running those spaces and teams in fast-paced environments taught me a lot and shaped how I work in games, placing a high value on maintaining alignment and vision in collaborative projects, clear communication, and making sure everybody feels heard and supported!
         </p>
         <p>
-          I hold a Bachelor of Music from the University of Toronto, and I’m based in Toronto.
+          This website is a showcase of my work. If you want to chat about sound design, game audio, coffee, or anything else, feel free to reach out!
         </p>
       </div>
       <div className="about-tools" aria-label="Tools and systems">
