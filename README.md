@@ -13,9 +13,9 @@ Live site: https://j-yeo.github.io/portfolio/
 
 ## Featured work
 
-- Unreal Engine / Wwise Technical Audio Reel
 - Unity / Wwise Technical Sound Design Reel
 - Dust Bunny case study
+- Unreal Engine / Wwise Technical Audio Reel
 
 ## Contact
 

@@ -51,7 +51,7 @@ const dustBunnyTeaser = {
   title: 'Dust Bunny',
   label: 'Featured Project / Case Study',
   description:
-    'Technical audio systems from Dust Bunny, a 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
+    'The reel featured above is a showcase of technical audio systems from Dust Bunny, a 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
   tags: ['Unity', 'Wwise', 'C#', 'Adaptive Music', 'RTPCs', 'Spatial Audio'],
   href: links.unityCaseStudy,
   cta: 'Read Case Study',
@@ -495,7 +495,7 @@ function HomePage({ onActiveAtmosphereChange }) {
   return (
     <>
       <section id="home" className="hero-shell" data-home-atmosphere>
-        <p className="eyebrow hero-eyebrow">Featured Technical Sound Design Reel</p>
+        <p className="eyebrow hero-eyebrow">Sound Design / Game Audio Implementation</p>
         <FeaturedReel work={featuredReel} />
       </section>
 
