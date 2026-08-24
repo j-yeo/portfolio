@@ -10,8 +10,8 @@ const links = {
   linkedin: 'https://www.linkedin.com/in/josh-h-yeo/',
   resume: assetPath('resume.pdf'),
   itch: 'https://j-yeo.itch.io',
-  featuredTechnicalReel: 'https://vimeo.com/1192391079',
-  featuredTechnicalReelEmbed: 'https://player.vimeo.com/video/1192391079',
+  featuredTechnicalReel: 'https://vimeo.com/1188123456',
+  featuredTechnicalReelEmbed: 'https://player.vimeo.com/video/1188123456',
   unityTechnicalReel: 'https://vimeo.com/1192391079',
   unityTechnicalReelEmbed: 'https://player.vimeo.com/video/1192391079',
   unrealTechnicalReel: 'https://vimeo.com/1188123456',
@@ -51,13 +51,13 @@ const dustBunnyTeaser = {
   title: 'Dust Bunny',
   label: 'Featured Project / Case Study',
   description:
-    'The reel featured above is a showcase of technical audio systems from Dust Bunny, a 3D narrative-platformer about a sentient bunny-shaped dust clump moving through a messy bedroom, including adaptive music, physics-driven RTPCs, spatial ambience, gameplay-responsive SFX, and mix-state behavior.',
+    'An in-depth case study of technical audio systems from Dust Bunny.',
   tags: ['Unity', 'Wwise', 'C#', 'Adaptive Music', 'RTPCs', 'Spatial Audio'],
   href: links.unityCaseStudy,
   cta: 'Read Case Study',
 }
 
-const featuredReel = reels[1]
+const featuredReel = reels[0]
 const unityReel = reels[1]
 const unrealReel = reels[0]
 
@@ -418,7 +418,6 @@ function DustBunnyTeaser() {
       </div>
       <div className="case-teaser-actions">
         <ButtonLink href={dustBunnyTeaser.href}>{dustBunnyTeaser.cta}</ButtonLink>
-        <ButtonLink href={links.unityTechnicalReel} variant="secondary">Watch Reel</ButtonLink>
       </div>
     </article>
   )
@@ -501,8 +500,8 @@ function HomePage({ onActiveAtmosphereChange }) {
 
       <section id="reels" className="section-shell selected-work" data-home-atmosphere>
         <div className="reel-list">
+          <ReelEmbed work={unityReel} />
           <DustBunnyTeaser />
-          <ReelEmbed work={unrealReel} />
         </div>
       </section>
 
